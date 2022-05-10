@@ -1,0 +1,12 @@
+@import "_variables.scss";
+
+@mixin shadowBox {
+    -webkit-box-shadow: 10px 10px 15px -4px $greydark;
+    -moz-box-shadow: 10px 10px 15px -4px $greydark;
+    box-shadow: 10px 10px 15px -4px $greydark;  
+}
+
+@mixin messageS {
+    border: 1px solid $greylight;
+    color: $eggw;
+}
