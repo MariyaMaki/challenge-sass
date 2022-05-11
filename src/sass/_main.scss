@@ -1,0 +1,107 @@
+body {
+  font: 100% "Space Mono", monospace;
+  color: $greydark;
+  margin: 0;
+  padding: 0;
+  background-color: $eggw;
+  overflow-x: hidden;
+
+  h1,
+  h2,
+  h3 {
+    color: $pink;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  main {
+    padding: 0 1em;
+
+    article {
+      display: flex;
+      flex-wrap: wrap;
+
+      section {
+        flex-grow: 1;
+        flex-basis: 45%;
+        border: 1px $greylight solid;
+        @include shadowBox;
+        padding: $sixteen;
+        margin: $sixteen;
+        clear: both;
+        overflow: auto;
+        box-sizing: border-box;
+      }
+      #selling-points {
+        flex-grow: 2;
+        flex-basis: 100%;
+      }
+
+      code {
+        background: $black;
+        border: 1px solid $greydark;
+        color: $greylight;
+        page-break-inside: avoid;
+        font-family: monospace;
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 1.6em;
+        max-width: 100%;
+        overflow: auto;
+        padding: 1em 1.5em;
+        display: block;
+        word-wrap: break-word;
+        .before {
+          float: left;
+          width: 40%;
+        }
+        .after {
+          float: right;
+          width: 40%;
+        }
+      }
+    }
+    %message-shared {
+      border: 1px solid $greylight;
+      color: $eggw;
+      padding: $sixteen;
+    }
+    .messages {
+      padding: $sixteen;
+      .success,
+      .error,
+      .warning {
+        @extend %message-shared;
+      }
+
+      .success {
+        @extend %message-shared;
+        background-color: $green;
+      }
+
+      .error {
+        @extend %message-shared;
+        background-color: $red;
+        &:hover {
+          background-color: green;
+        }
+      }
+
+      .warning {
+        @extend %message-shared;
+        background-color: $orange;
+      }
+    }
+  }
+
+  footer {
+    h3 {
+      text-align: center;
+      font-size: 1.5em;
+      padding: 32px;
+      margin-bottom: 0px;
+    }
+  }
+}

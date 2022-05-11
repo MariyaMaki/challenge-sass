@@ -2,13 +2,19 @@
 
 $greydark: #6b717f;
 $eggw: #fff;
-$greylight: #8C8C8C;
-$pink: #BF4080;
-$green:green;
-$red:red;
-$orange:orange;
-$black:#000;
+$greylight: #8c8c8c;
+$pink: #bf4080;
+$green: green;
+$red: red;
+$orange: orange;
+$black: #000;
 
 /*variable taille*/
 
 $sixteen: 16px;
+
+@mixin shadowBox {
+  -webkit-box-shadow: 10px 10px 15px -4px $greydark;
+  -moz-box-shadow: 10px 10px 15px -4px $greydark;
+  box-shadow: 10px 10px 15px -4px $greydark;
+}
