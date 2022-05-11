@@ -6,33 +6,32 @@ body {
   background-color: $eggw;
   overflow-x: hidden;
 
-  h1,
-  h2,
-  h3 {
+  h1 {
+    text-align: center;
     color: $pink;
   }
 
-  h1 {
-    text-align: center;
-  }
-
   main {
-    padding: 0 1em;
+    padding: 0;
 
     article {
       display: flex;
       flex-wrap: wrap;
+      padding: $sixteen;
 
       section {
         flex-grow: 1;
         flex-basis: 45%;
         border: 1px $greylight solid;
-        @include shadowBox;
+        @include shadowBox($greydark);
         padding: $sixteen;
         margin: $sixteen;
         clear: both;
         overflow: auto;
         box-sizing: border-box;
+        h2 {
+          color: $pink;
+        }
       }
       #selling-points {
         flex-grow: 2;
@@ -97,11 +96,13 @@ body {
   }
 
   footer {
+    padding: 2 * $sixteen;
     h3 {
       text-align: center;
       font-size: 1.5em;
       padding: 32px;
       margin-bottom: 0px;
+      color: $pink;
     }
   }
 }

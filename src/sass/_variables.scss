@@ -13,8 +13,20 @@ $black: #000;
 
 $sixteen: 16px;
 
-@mixin shadowBox {
-  -webkit-box-shadow: 10px 10px 15px -4px $greydark;
-  -moz-box-shadow: 10px 10px 15px -4px $greydark;
-  box-shadow: 10px 10px 15px -4px $greydark;
+/*mixins*/
+
+@mixin shadowBox($color) {
+  -webkit-box-shadow: 10px 10px 15px -4px $color;
+  -moz-box-shadow: 10px 10px 15px -4px $color;
+  box-shadow: 10px 10px 15px -4px $color;
+}
+
+$base-color: #036;
+$text-color: rgb(243, 14, 14);
+
+@for $i from 0 through 7 {
+  li:nth-child(#{$i}) {
+    background-color: lighten($base-color, $i * 10%);
+    color: darken($text-color, $i * 10%);
+  }
 }

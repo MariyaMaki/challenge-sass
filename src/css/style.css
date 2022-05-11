@@ -1,5 +1,46 @@
 /*variables color*/
 /*variable taille*/
+/*mixins*/
+li:nth-child(0) {
+  background-color: #003366;
+  color: #f30e0e;
+}
+
+li:nth-child(1) {
+  background-color: #004d99;
+  color: #c40a0a;
+}
+
+li:nth-child(2) {
+  background-color: #0066cc;
+  color: #940707;
+}
+
+li:nth-child(3) {
+  background-color: #0080ff;
+  color: #630505;
+}
+
+li:nth-child(4) {
+  background-color: #3399ff;
+  color: #320303;
+}
+
+li:nth-child(5) {
+  background-color: #66b3ff;
+  color: #020000;
+}
+
+li:nth-child(6) {
+  background-color: #99ccff;
+  color: black;
+}
+
+li:nth-child(7) {
+  background-color: #cce6ff;
+  color: black;
+}
+
 body {
   font: 100% "Space Mono", monospace;
   color: #6b717f;
@@ -8,16 +49,12 @@ body {
   background-color: #fff;
   overflow-x: hidden;
 }
-body h1,
-body h2,
-body h3 {
-  color: #bf4080;
-}
 body h1 {
   text-align: center;
+  color: #bf4080;
 }
 body main {
-  padding: 0 1em;
+  padding: 0;
 }
 body main article {
   display: -webkit-box;
@@ -25,6 +62,7 @@ body main article {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding: 16px;
 }
 body main article section {
   -webkit-box-flex: 1;
@@ -41,6 +79,9 @@ body main article section {
   overflow: auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+body main article section h2 {
+  color: #bf4080;
 }
 body main article #selling-points {
   -webkit-box-flex: 2;
@@ -94,9 +135,13 @@ body main .messages .error:hover {
 body main .messages .warning {
   background-color: orange;
 }
+body footer {
+  padding: 32px;
+}
 body footer h3 {
   text-align: center;
   font-size: 1.5em;
   padding: 32px;
   margin-bottom: 0px;
+  color: #bf4080;
 }/*# sourceMappingURL=style.css.map */
